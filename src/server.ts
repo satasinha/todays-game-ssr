@@ -12,6 +12,7 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine({
   allowedHosts: ['todays-game-ssr-hcgvb6caegdffpea.canadacentral-01.azurewebsites.net', 'localhost', '169.254.129.4:8080'],
+  trustProxyHeaders: true,
 });
 
 /**
