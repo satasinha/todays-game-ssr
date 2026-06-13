@@ -11,7 +11,7 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine({
-  allowedHosts: ['todays-game-ssr-hcgvb6caegdffpea.canadacentral-01.azurewebsites.net', 'localhost', '169.254.129.4:8080'],
+  allowedHosts: ['todays-game-ssr-hcgvb6caegdffpea.canadacentral-01.azurewebsites.net', 'localhost'],
   trustProxyHeaders: true,
 });
 
@@ -26,6 +26,11 @@ const angularApp = new AngularNodeAppEngine({
  * });
  * ```
  */
+
+/**
+ * Azure App Service health probe — bypass Angular SSR host validation.
+ */
+app.get('/robots933456.txt', (_req, res) => res.sendStatus(200));
 
 /**
  * Serve static files from /browser
