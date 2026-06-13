@@ -11,7 +11,7 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine({
-  allowedHosts: [/\.azurewebsites\.net$/, /localhost/],
+  allowedHosts: [/\.azurewebsites\.net$/, /localhost/, /^169\.254\./],
 });
 
 /**
