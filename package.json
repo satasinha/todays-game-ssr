@@ -11,6 +11,9 @@
     "lint": "ng lint"
   },
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@angular/animations": "^22.0.1",
     "@angular/cdk": "^22.0.1",
@@ -40,7 +43,7 @@
     "@types/express": "^5.0.6",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^20.17.19",
+    "@types/node": "^22",
     "codelyzer": "^6.0.0",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "~3.6.0",
