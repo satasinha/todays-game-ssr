@@ -1,13 +1,36 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
+      "name": "ng serve (CSR)",
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://localhost:4200/"
+    },
+    {
+      "name": "Debug SSR server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/dist/todays-game-ssr/server/server.mjs",
+      "runtimeArgs": ["--enable-source-maps"],
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/dist/**/*.mjs"],
+      "resolveSourceMapLocations": ["${workspaceFolder}/dist/**", "!**/node_modules/**"],
+      "env": {
+        "PORT": "4000"
+      },
+      "preLaunchTask": "npm: build",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Attach to SSR server",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/dist/**/*.mjs"],
+      "resolveSourceMapLocations": ["${workspaceFolder}/dist/**", "!**/node_modules/**"]
     },
     {
       "name": "ng test",

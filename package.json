@@ -6,9 +6,9 @@
     "start": "ng serve",
     "build": "ng build --configuration production",
     "serve:ssr": "node dist/todays-game-ssr/server/server.mjs",
+    "serve:ssr:debug": "node --inspect --enable-source-maps dist/todays-game-ssr/server/server.mjs",
     "test": "ng test",
-    "lint": "ng lint",
-    "serve:ssr:angular-basic": "node dist/angular-basic/server/server.mjs"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
