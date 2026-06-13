@@ -58,6 +58,8 @@ const FLAG_CODES: Record<string, string> = {
       margin: 6px 0;
       border-radius: 12px !important;
       transition: box-shadow 0.2s;
+      min-height: 120px;
+      contain: layout;
     }
     .match-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important; }
     .match-card.finished { opacity: 0.8; }

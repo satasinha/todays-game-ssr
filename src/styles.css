@@ -4,5 +4,11 @@
 @import '@fontsource/roboto/500.css';
 @import 'material-icons/iconfont/material-icons.css';
 
+/* Override font-display: block from material-icons package to avoid render blocking */
+@font-face {
+  font-family: 'Material Icons';
+  font-display: swap;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
