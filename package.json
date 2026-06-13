@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node dist/todays-game-ssr/server/server.mjs",
+    "start:dev": "ng serve",
     "build": "ng build --configuration production",
     "serve:ssr": "node dist/todays-game-ssr/server/server.mjs",
     "serve:ssr:debug": "node --inspect --enable-source-maps dist/todays-game-ssr/server/server.mjs",
